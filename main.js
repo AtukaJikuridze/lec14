@@ -18,23 +18,8 @@ function authenticate(req, res, next) {
 app.get("/users", async (req, res) => {
   const data = await read("users.json", true);
 
-  // pagination: /users?page=1&limit=5
-  const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 5;
-  const startIndex = (page - 1) * limit;
-  const endIndex = page * limit;
-
-  const paginatedData = data.slice(startIndex, endIndex);
-
-  res.json({
-    total: data.length,
-    page,
-    limit,
-    totalPages: Math.ceil(data.length / limit),
-    data: paginatedData,
-  });
+  res.json(data);
 });
-
 app.get("/users/:id", async (req, res) => {
   const { id } = req.params;
   const data = await read("users.json", true);
