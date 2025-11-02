@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "avto",
+    "age": 20,
+    "email": "avtojikuridze@gmail.com",
+    "eyecolor": "brown"
+  },
+  {
+    "id": 3,
+    "name": "gioqq",
+    "age": 22,
+    "eyecolor": "rede",
+    "email": "tr@gmail.com"
+  },
+  {
+    "id": 4,
+    "name": "gioqq",
+    "age": 22,
+    "eyecolor": "rede",
+    "email": "tr@gmail.com"
+  }
+]
